@@ -1,0 +1,26 @@
+[
+  {
+    "id": "coffee-101",
+    "title": { "vi": "Cà phê nhập môn", "en": "Coffee 101" },
+    "desc": {
+      "vi": "Sáu bài ngắn đi từ hạt đến ly: chọn hạt, xay, nước, tỉ lệ, pha và nếm.",
+      "en": "Six short posts from bean to cup: beans, grinding, water, ratio, brewing and tasting."
+    }
+  },
+  {
+    "id": "seed-to-cup",
+    "title": { "vi": "Từ cây đến cốc", "en": "Seed to cup" },
+    "desc": {
+      "vi": "Hành trình của hạt cà phê: trồng, sơ chế, rang, pha.",
+      "en": "The journey of a coffee bean: growing, processing, roasting, brewing."
+    }
+  },
+  {
+    "id": "phin-master",
+    "title": { "vi": "Làm chủ cái phin", "en": "Mastering the phin" },
+    "desc": {
+      "vi": "Mọi thứ về cách pha truyền thống của Việt Nam.",
+      "en": "Everything about Vietnam's traditional brewer."
+    }
+  }
+]

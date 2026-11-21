@@ -1,0 +1,404 @@
+[
+ {
+  "id": "arabica",
+  "term": {
+   "vi": "Arabica",
+   "en": "Arabica"
+  },
+  "def": {
+   "vi": "Loài cà phê phổ biến nhất, trồng ở vùng cao, vị thơm và chua thanh, ít caffeine hơn Robusta.",
+   "en": "The most widely grown coffee species, from high altitudes; aromatic, gently acidic, lower in caffeine than Robusta."
+  },
+  "post": "arabica-vs-robusta"
+ },
+ {
+  "id": "robusta",
+  "term": {
+   "vi": "Robusta",
+   "en": "Robusta"
+  },
+  "def": {
+   "vi": "Loài Coffea canephora: khỏe, nhiều caffeine, vị đậm và đắng. Việt Nam trồng chủ yếu loài này.",
+   "en": "Coffea canephora: hardy, high in caffeine, bold and bitter. Most Vietnamese coffee is Robusta."
+  },
+  "post": "arabica-vs-robusta"
+ },
+ {
+  "id": "bloom",
+  "term": {
+   "vi": "Ủ (bloom)",
+   "en": "Bloom"
+  },
+  "def": {
+   "vi": "Bước rót một ít nước đầu tiên cho bột ướt đều và nhả khí CO₂ trước khi rót tiếp.",
+   "en": "A small first pour that wets the grounds and lets CO₂ escape before the main pours."
+  },
+  "post": "v60-first-pour-over"
+ },
+ {
+  "id": "body",
+  "term": {
+   "vi": "Thân (body)",
+   "en": "Body"
+  },
+  "def": {
+   "vi": "Cảm giác độ dày của cà phê trong miệng: mỏng như trà hay tròn như sữa.",
+   "en": "How heavy the coffee feels in the mouth: thin like tea or round like milk."
+  },
+  "post": "coffee-101-tasting"
+ },
+ {
+  "id": "acidity",
+  "term": {
+   "vi": "Độ chua (acidity)",
+   "en": "Acidity"
+  },
+  "def": {
+   "vi": "Vị chua dễ chịu, tươi như trái cây. Khác với chua gắt do chiết xuất thiếu.",
+   "en": "Pleasant, fruit-like brightness. Different from the sharp sourness of under-extraction."
+  },
+  "post": "coffee-101-tasting"
+ },
+ {
+  "id": "aftertaste",
+  "term": {
+   "vi": "Hậu vị",
+   "en": "Finish"
+  },
+  "def": {
+   "vi": "Vị còn lại sau khi nuốt: dài hay ngắn, dễ chịu hay khô miệng.",
+   "en": "The taste left after swallowing: long or short, pleasant or drying."
+  },
+  "post": "coffee-101-tasting"
+ },
+ {
+  "id": "extraction",
+  "term": {
+   "vi": "Chiết xuất",
+   "en": "Extraction"
+  },
+  "def": {
+   "vi": "Lượng chất hòa tan nước lấy ra từ bột cà phê, tính theo phần trăm khối lượng bột. Mục tiêu thường là 18–22%.",
+   "en": "How much of the ground coffee's mass ends up dissolved in the drink. A common target is 18–22%."
+  },
+  "post": "coffee-101-ratio"
+ },
+ {
+  "id": "under-extraction",
+  "term": {
+   "vi": "Chiết xuất thiếu",
+   "en": "Under-extraction"
+  },
+  "def": {
+   "vi": "Nước lấy chưa đủ chất: ly cà phê chua gắt, mỏng, hậu vị ngắn. Thường sửa bằng cách xay mịn hơn.",
+   "en": "Too little was dissolved: sour, thin, short finish. Usually fixed by grinding finer."
+  },
+  "post": "coffee-101-grind"
+ },
+ {
+  "id": "over-extraction",
+  "term": {
+   "vi": "Chiết xuất quá",
+   "en": "Over-extraction"
+  },
+  "def": {
+   "vi": "Nước lấy cả những chất đắng chát: ly cà phê đắng, khô miệng. Thường sửa bằng cách xay thô hơn.",
+   "en": "Bitter, harsh compounds were dissolved too: bitter and drying. Usually fixed by grinding coarser."
+  },
+  "post": "coffee-101-grind"
+ },
+ {
+  "id": "tds",
+  "term": {
+   "vi": "TDS",
+   "en": "TDS"
+  },
+  "def": {
+   "vi": "Tổng chất rắn hòa tan, đo bằng khúc xạ kế; cho biết ly cà phê đậm hay loãng. Cà phê lọc cân bằng khoảng 1,15–1,35%.",
+   "en": "Total dissolved solids, measured with a refractometer; tells you how strong a cup is. Balanced filter coffee is about 1.15–1.35%."
+  },
+  "post": "coffee-101-ratio"
+ },
+ {
+  "id": "gold-cup",
+  "term": {
+   "vi": "Gold Cup",
+   "en": "Gold Cup"
+  },
+  "def": {
+   "vi": "Chuẩn của SCA cho cà phê lọc: khoảng 55 g/L, chiết xuất 18–22%, TDS 1,15–1,35%.",
+   "en": "The SCA standard for filter coffee: about 55 g/L, 18–22% extraction, 1.15–1.35% TDS."
+  },
+  "post": "coffee-101-ratio"
+ },
+ {
+  "id": "ratio",
+  "term": {
+   "vi": "Tỉ lệ pha",
+   "en": "Brew ratio"
+  },
+  "def": {
+   "vi": "Khối lượng nước so với khối lượng cà phê, viết dạng 1:16. Với espresso là lượng ra cốc so với bột vào.",
+   "en": "Water weight relative to coffee weight, written 1:16. For espresso, liquid out relative to coffee in."
+  },
+  "post": "coffee-101-ratio"
+ },
+ {
+  "id": "burr",
+  "term": {
+   "vi": "Máy xay lưỡi đĩa",
+   "en": "Burr grinder"
+  },
+  "def": {
+   "vi": "Máy xay nghiền hạt giữa hai đĩa với khe hở cố định, cho bột đều hơn máy xay lưỡi dao.",
+   "en": "A grinder that crushes beans between two burrs at a fixed gap, far more even than a blade grinder."
+  },
+  "post": "coffee-101-grind"
+ },
+ {
+  "id": "crema",
+  "term": {
+   "vi": "Crema",
+   "en": "Crema"
+  },
+  "def": {
+   "vi": "Lớp bọt màu nâu vàng trên mặt espresso, tạo bởi khí CO₂ và dầu dưới áp suất.",
+   "en": "The golden-brown foam on top of espresso, formed by CO₂ and oils under pressure."
+  },
+  "post": "espresso-basics"
+ },
+ {
+  "id": "dial-in",
+  "term": {
+   "vi": "Dial-in",
+   "en": "Dialling in"
+  },
+  "def": {
+   "vi": "Quá trình chỉnh độ xay, liều lượng và tỉ lệ cho tới khi shot espresso ngon.",
+   "en": "Adjusting grind, dose and ratio until an espresso tastes right."
+  },
+  "post": "espresso-basics"
+ },
+ {
+  "id": "first-crack",
+  "term": {
+   "vi": "Crack 1",
+   "en": "First crack"
+  },
+  "def": {
+   "vi": "Tiếng nứt như bỏng ngô khi hơi nước và khí làm hạt nứt trong lò rang; mốc bắt đầu của rang sáng.",
+   "en": "The popcorn-like crackle as steam splits the bean during roasting; where light roasts begin."
+  },
+  "post": "roast-levels"
+ },
+ {
+  "id": "second-crack",
+  "term": {
+   "vi": "Crack 2",
+   "en": "Second crack"
+  },
+  "def": {
+   "vi": "Tiếng nổ nhỏ dồn dập khi cấu trúc hạt vỡ và dầu ra bề mặt; vùng rang đậm.",
+   "en": "Quieter, rapid snapping as the bean's structure breaks and oils surface; dark-roast territory."
+  },
+  "post": "roast-levels"
+ },
+ {
+  "id": "degassing",
+  "term": {
+   "vi": "Nghỉ hạt (degassing)",
+   "en": "Degassing"
+  },
+  "def": {
+   "vi": "Hạt mới rang nhả dần CO₂ trong vài ngày đến vài tuần. Pha quá sớm dễ chiết xuất không đều.",
+   "en": "Fresh beans release CO₂ over days to weeks. Brewing too soon can extract unevenly."
+  },
+  "post": "roast-levels"
+ },
+ {
+  "id": "washed",
+  "term": {
+   "vi": "Sơ chế ướt (washed)",
+   "en": "Washed process"
+  },
+  "def": {
+   "vi": "Bỏ vỏ và thịt quả, lên men cho tan lớp nhớt rồi rửa sạch trước khi phơi. Vị sạch, chua rõ.",
+   "en": "Skin and pulp are removed, mucilage fermented off and washed before drying. Clean taste, clear acidity."
+  },
+  "post": "washed-vs-natural"
+ },
+ {
+  "id": "natural",
+  "term": {
+   "vi": "Sơ chế khô (natural)",
+   "en": "Natural process"
+  },
+  "def": {
+   "vi": "Phơi nguyên quả rồi mới tách hạt. Vị ngọt, đậm mùi trái cây, thân dày.",
+   "en": "The whole cherry is dried before the seed is removed. Sweet, fruity, heavy body."
+  },
+  "post": "washed-vs-natural"
+ },
+ {
+  "id": "honey",
+  "term": {
+   "vi": "Sơ chế mật ong (honey)",
+   "en": "Honey process"
+  },
+  "def": {
+   "vi": "Bỏ vỏ và thịt quả nhưng giữ lại một phần lớp nhớt khi phơi. Nằm giữa washed và natural.",
+   "en": "Skin and pulp are removed but some mucilage stays on while drying. Between washed and natural."
+  },
+  "post": "washed-vs-natural"
+ },
+ {
+  "id": "mucilage",
+  "term": {
+   "vi": "Lớp nhớt (mucilage)",
+   "en": "Mucilage"
+  },
+  "def": {
+   "vi": "Lớp ngọt, dính bao quanh hạt bên dưới thịt quả cà phê.",
+   "en": "The sweet, sticky layer around the seed beneath the coffee cherry's pulp."
+  },
+  "post": "washed-vs-natural"
+ },
+ {
+  "id": "anaerobic",
+  "term": {
+   "vi": "Lên men yếm khí",
+   "en": "Anaerobic fermentation"
+  },
+  "def": {
+   "vi": "Ủ quả hoặc hạt trong thùng kín ít oxy trước khi phơi, tạo nốt hương mạnh và lạ.",
+   "en": "Fermenting cherries or beans in sealed, low-oxygen tanks before drying, for loud, unusual flavors."
+  },
+  "post": "washed-vs-natural"
+ },
+ {
+  "id": "green-coffee",
+  "term": {
+   "vi": "Cà phê nhân xanh",
+   "en": "Green coffee"
+  },
+  "def": {
+   "vi": "Hạt cà phê đã sơ chế nhưng chưa rang.",
+   "en": "Processed coffee seeds before roasting."
+  }
+ },
+ {
+  "id": "single-origin",
+  "term": {
+   "vi": "Single origin",
+   "en": "Single origin"
+  },
+  "def": {
+   "vi": "Cà phê từ một nguồn gốc duy nhất (một nước, vùng hoặc trang trại), không phối trộn.",
+   "en": "Coffee from one source (a country, region or farm), not blended."
+  }
+ },
+ {
+  "id": "blend",
+  "term": {
+   "vi": "Phối trộn (blend)",
+   "en": "Blend"
+  },
+  "def": {
+   "vi": "Hạt từ nhiều nguồn gốc hoặc nhiều loài trộn lại để có vị ổn định hoặc cân bằng.",
+   "en": "Beans from several origins or species combined for a consistent or balanced taste."
+  }
+ },
+ {
+  "id": "phin",
+  "term": {
+   "vi": "Phin",
+   "en": "Phin"
+  },
+  "def": {
+   "vi": "Dụng cụ pha nhỏ giọt bằng kim loại của Việt Nam: cốc đục lỗ, tấm nén và nắp.",
+   "en": "Vietnam's metal drip brewer: a perforated cup, a press disc and a lid."
+  },
+  "post": "phin-guide"
+ },
+ {
+  "id": "ca-phe-sua-da",
+  "term": {
+   "vi": "Cà phê sữa đá",
+   "en": "Cà phê sữa đá"
+  },
+  "def": {
+   "vi": "Cà phê phin pha với sữa đặc rồi đổ lên đá.",
+   "en": "Phin coffee mixed with sweetened condensed milk and poured over ice."
+  },
+  "post": "phin-guide"
+ },
+ {
+  "id": "ca-phe-trung",
+  "term": {
+   "vi": "Cà phê trứng",
+   "en": "Egg coffee"
+  },
+  "def": {
+   "vi": "Món của Hà Nội: lòng đỏ trứng đánh bông với sữa đặc, phủ lên cà phê.",
+   "en": "A Hanoi drink: egg yolk whipped with condensed milk, spooned over coffee."
+  }
+ },
+ {
+  "id": "cold-brew",
+  "term": {
+   "vi": "Cold brew",
+   "en": "Cold brew"
+  },
+  "def": {
+   "vi": "Cà phê ngâm trong nước nguội 12–24 giờ, cho cốt ngọt và ít chua.",
+   "en": "Coffee steeped in cold water for 12–24 hours, giving a sweet, low-acid concentrate."
+  },
+  "post": "cold-brew-at-home"
+ },
+ {
+  "id": "pour-over",
+  "term": {
+   "vi": "Pour-over",
+   "en": "Pour-over"
+  },
+  "def": {
+   "vi": "Pha bằng cách rót nước tay qua bột cà phê trong phễu có giấy lọc, như V60.",
+   "en": "Brewing by hand-pouring water over coffee in a filter cone such as the V60."
+  },
+  "post": "v60-first-pour-over"
+ },
+ {
+  "id": "cupping",
+  "term": {
+   "vi": "Cupping",
+   "en": "Cupping"
+  },
+  "def": {
+   "vi": "Cách nếm thử chuẩn: ngâm bột trong bát, phá lớp váng rồi húp bằng muỗng để so sánh nhiều loại hạt.",
+   "en": "The standard tasting method: steep grounds in bowls, break the crust and slurp from a spoon to compare coffees."
+  }
+ },
+ {
+  "id": "roast-date",
+  "term": {
+   "vi": "Ngày rang",
+   "en": "Roast date"
+  },
+  "def": {
+   "vi": "Ngày hạt ra lò. Quan trọng hơn hạn sử dụng khi đánh giá độ tươi.",
+   "en": "The day the beans were roasted. More useful than a best-before date for judging freshness."
+  },
+  "post": "coffee-101-beans"
+ },
+ {
+  "id": "specialty",
+  "term": {
+   "vi": "Cà phê đặc sản",
+   "en": "Specialty coffee"
+  },
+  "def": {
+   "vi": "Cà phê được chấm từ 80/100 điểm trở lên theo thang cupping của SCA.",
+   "en": "Coffee scoring 80/100 or higher on the SCA cupping scale."
+  }
+ }
+]

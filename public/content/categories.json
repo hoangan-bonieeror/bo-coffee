@@ -1,0 +1,92 @@
+[
+  {
+    "id": "origins",
+    "icon": "🌱",
+    "colors": ["#4f7040", "#9a7b3c"],
+    "title": { "vi": "Hạt & nguồn gốc", "en": "Beans & origins" },
+    "desc": {
+      "vi": "Loài, giống và vùng trồng: vì sao hai túi cà phê có thể khác nhau đến vậy.",
+      "en": "Species, varieties and growing regions: why two bags of coffee can taste so different."
+    }
+  },
+  {
+    "id": "processing",
+    "icon": "🍒",
+    "colors": ["#b3362b", "#d98a4e"],
+    "title": { "vi": "Sơ chế", "en": "Processing" },
+    "desc": {
+      "vi": "Từ trái cà phê chín đến hạt nhân xanh: washed, natural, honey và lên men.",
+      "en": "From ripe cherry to green bean: washed, natural, honey and fermentation."
+    }
+  },
+  {
+    "id": "roasting",
+    "icon": "🔥",
+    "colors": ["#6b3a1c", "#c46a2b"],
+    "title": { "vi": "Rang", "en": "Roasting" },
+    "desc": {
+      "vi": "Mức rang, crack và vì sao hạt cần nghỉ vài ngày sau khi rang.",
+      "en": "Roast levels, cracks and why beans need to rest after roasting."
+    }
+  },
+  {
+    "id": "brewing",
+    "icon": "🫖",
+    "colors": ["#8a5a3b", "#d9a066"],
+    "title": { "vi": "Pha chế", "en": "Brewing" },
+    "desc": {
+      "vi": "Tỉ lệ, độ xay, nhiệt độ và thời gian — kèm công cụ tính và hẹn giờ ngay trong bài.",
+      "en": "Ratio, grind, temperature and time — with a calculator and timer right in the article."
+    }
+  },
+  {
+    "id": "espresso",
+    "icon": "☕",
+    "colors": ["#3b2418", "#a4561f"],
+    "title": { "vi": "Espresso", "en": "Espresso" },
+    "desc": {
+      "vi": "Shot cơ bản, chỉnh máy xay và đồ uống sữa.",
+      "en": "Shot basics, dialling in and milk drinks."
+    }
+  },
+  {
+    "id": "vietnam",
+    "icon": "🇻🇳",
+    "colors": ["#b3362b", "#e0a030"],
+    "title": { "vi": "Cà phê Việt", "en": "Vietnamese coffee" },
+    "desc": {
+      "vi": "Phin, Robusta Tây Nguyên, Arabica Cầu Đất và những món cà phê rất riêng của Việt Nam.",
+      "en": "The phin, Central Highlands Robusta, Cau Dat Arabica and Vietnam's own coffee drinks."
+    }
+  },
+  {
+    "id": "tasting",
+    "icon": "👅",
+    "colors": ["#7a4b8c", "#d1495b"],
+    "title": { "vi": "Nếm & cảm quan", "en": "Tasting" },
+    "desc": {
+      "vi": "Gọi tên hương vị, phân biệt chua với đắng, và tự cupping tại nhà.",
+      "en": "Naming flavors, telling acidity from bitterness, and cupping at home."
+    }
+  },
+  {
+    "id": "gear",
+    "icon": "⚖️",
+    "colors": ["#4e5a63", "#8a7a66"],
+    "title": { "vi": "Dụng cụ", "en": "Gear" },
+    "desc": {
+      "vi": "Máy xay, cân, ấm rót và nước: nên đầu tư vào đâu trước.",
+      "en": "Grinders, scales, kettles and water: what to invest in first."
+    }
+  },
+  {
+    "id": "coffee-news",
+    "icon": "📰",
+    "colors": ["#4f7040", "#3b2418"],
+    "title": { "vi": "Bản tin cà phê", "en": "Coffee news" },
+    "desc": {
+      "vi": "Bot tổng hợp tin cà phê mỗi tuần: thị trường, vùng trồng, quán và thiết bị.",
+      "en": "A weekly bot digest of coffee news: markets, farms, cafés and gear."
+    }
+  }
+]

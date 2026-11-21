@@ -1,0 +1,130 @@
+[
+  {
+    "id": "phin",
+    "icon": "🇻🇳",
+    "name": { "vi": "Phin", "en": "Phin" },
+    "ratio": 6,
+    "ratioRange": [4, 10],
+    "coffee": 20,
+    "tempC": [92, 96],
+    "grind": { "vi": "Mịn vừa, như muối ăn", "en": "Medium-fine, like table salt" },
+    "timeSec": 300,
+    "steps": [
+      { "at": 0, "pour": 40, "label": { "vi": "Ủ: rót vừa ngập bột", "en": "Bloom: just cover the grounds" } },
+      { "at": 40, "pour": 80, "label": { "vi": "Rót đầy phin, đậy nắp", "en": "Fill the chamber, put the lid on" } },
+      { "at": 300, "label": { "vi": "Giọt cuối: nhấc phin ra", "en": "Last drips: lift the phin" } }
+    ],
+    "note": {
+      "vi": "Cà phê phin là cà phê đặc. Muốn uống đen không đường thì tăng nước lên 1:8–1:10.",
+      "en": "Phin coffee is a concentrate. For black coffee without milk, stretch to 1:8–1:10."
+    },
+    "source": [
+      { "title": "Coava Coffee — Phin brew guide", "url": "https://coavacoffee.com/brew-methods/phin" },
+      { "title": "CoffeeGeek — How to make Vietnamese iced coffee", "url": "https://coffeegeek.com/guides/howtos/how-to-make-vietnamese-iced-coffee/" }
+    ]
+  },
+  {
+    "id": "v60",
+    "icon": "🔻",
+    "name": { "vi": "Pour-over V60", "en": "V60 pour-over" },
+    "ratio": 16,
+    "ratioRange": [14, 18],
+    "coffee": 15,
+    "tempC": [91, 96],
+    "grind": { "vi": "Vừa, như cát mịn", "en": "Medium, like fine sand" },
+    "timeSec": 180,
+    "steps": [
+      { "at": 0, "pour": 45, "label": { "vi": "Ủ: rót xoắn ốc cho ướt đều", "en": "Bloom: spiral until evenly wet" } },
+      { "at": 45, "pour": 105, "label": { "vi": "Rót chậm từ giữa ra", "en": "Pour slowly from the centre out" } },
+      { "at": 75, "pour": 90, "label": { "vi": "Rót nốt, lắc nhẹ phễu", "en": "Pour the rest, swirl gently" } },
+      { "at": 180, "label": { "vi": "Nước rút hết: xong", "en": "Drawdown done" } }
+    ],
+    "source": [
+      { "title": "Seattle Coffee Gear — SCA Gold Cup Standard", "url": "https://www.seattlecoffeegear.com/blogs/learning-center/achieving-the-gold-cup-standard-your-guide-to-brewing-excellence" },
+      { "title": "Coffee Brews Hub — The science of coffee extraction", "url": "https://coffeebrewshub.com/blog/science-of-coffee-extraction" }
+    ]
+  },
+  {
+    "id": "french-press",
+    "icon": "🫖",
+    "name": { "vi": "French press", "en": "French press" },
+    "ratio": 15,
+    "ratioRange": [12, 17],
+    "coffee": 30,
+    "tempC": [90, 96],
+    "grind": { "vi": "Thô, như muối hột", "en": "Coarse, like sea salt" },
+    "timeSec": 270,
+    "steps": [
+      { "at": 0, "pour": 450, "label": { "vi": "Rót hết nước, đậy nắp", "en": "Pour all the water, lid on" } },
+      { "at": 240, "label": { "vi": "Phá lớp váng, vớt bọt", "en": "Break the crust, skim the foam" } },
+      { "at": 270, "label": { "vi": "Ấn nhẹ và rót ra ngay", "en": "Press gently and pour at once" } }
+    ],
+    "source": [
+      { "title": "Coffee Brews Hub — The science of coffee extraction", "url": "https://coffeebrewshub.com/blog/science-of-coffee-extraction" }
+    ]
+  },
+  {
+    "id": "aeropress",
+    "icon": "🧪",
+    "name": { "vi": "AeroPress", "en": "AeroPress" },
+    "ratio": 15,
+    "ratioRange": [6, 17],
+    "coffee": 15,
+    "tempC": [90, 95],
+    "grind": { "vi": "Mịn vừa", "en": "Medium-fine" },
+    "timeSec": 150,
+    "steps": [
+      { "at": 0, "pour": 50, "label": { "vi": "Ủ, khuấy 3 vòng", "en": "Bloom, stir three times" } },
+      { "at": 30, "pour": 175, "label": { "vi": "Rót nốt, gắn nắp lọc", "en": "Pour the rest, fit the cap" } },
+      { "at": 120, "label": { "vi": "Ấn chậm khoảng 30 giây", "en": "Press slowly for about 30 s" } }
+    ],
+    "source": [
+      { "title": "Honest Coffee Guide — Best temperature to brew coffee", "url": "https://honestcoffeeguide.com/best-temperature-to-brew-coffee/" }
+    ]
+  },
+  {
+    "id": "espresso",
+    "icon": "☕",
+    "name": { "vi": "Espresso", "en": "Espresso" },
+    "ratio": 2,
+    "ratioRange": [1.5, 3],
+    "coffee": 18,
+    "tempC": [90, 96],
+    "grind": { "vi": "Rất mịn", "en": "Fine" },
+    "timeSec": 28,
+    "steps": [
+      { "at": 0, "label": { "vi": "Bấm chiết", "en": "Start the shot" } },
+      { "at": 28, "label": { "vi": "Dừng khi cân đạt lượng ra", "en": "Stop at the target yield" } }
+    ],
+    "note": {
+      "vi": "Với espresso, tỉ lệ là khối lượng cà phê ra cốc so với bột vào (18 g vào, 36 g ra = 1:2).",
+      "en": "For espresso the ratio is liquid out versus dry coffee in (18 g in, 36 g out = 1:2)."
+    },
+    "source": [
+      { "title": "Coffee Tower — Espresso extraction", "url": "https://coffeetower.pages.dev/coffee/espresso-extraction" },
+      { "title": "Coffee Brews Hub — The science of coffee extraction", "url": "https://coffeebrewshub.com/blog/science-of-coffee-extraction" }
+    ]
+  },
+  {
+    "id": "cold-brew",
+    "icon": "🧊",
+    "name": { "vi": "Cold brew", "en": "Cold brew" },
+    "ratio": 8,
+    "ratioRange": [4, 15],
+    "coffee": 100,
+    "tempC": [4, 22],
+    "grind": { "vi": "Thô", "en": "Coarse" },
+    "timeSec": 57600,
+    "steps": [
+      { "at": 0, "pour": 800, "label": { "vi": "Trộn bột với nước nguội, cho vào tủ lạnh", "en": "Mix with cold water, refrigerate" } },
+      { "at": 57600, "label": { "vi": "Lọc bỏ bã; pha loãng khi uống", "en": "Strain; dilute to taste" } }
+    ],
+    "note": {
+      "vi": "1:8 cho ra cốt đặc, uống pha loãng với nước hoặc sữa. Ngâm 12–24 giờ.",
+      "en": "1:8 makes a concentrate to dilute with water or milk. Steep 12–24 hours."
+    },
+    "source": [
+      { "title": "Coffee Brews Hub — The science of coffee extraction", "url": "https://coffeebrewshub.com/blog/science-of-coffee-extraction" }
+    ]
+  }
+]
