@@ -25,6 +25,7 @@ import { PostMeta } from '../core/models';
 import { StoreService } from '../core/store.service';
 import { PostCard } from '../shared/post-card';
 import { mountBrewBlocks } from '../shared/brew-blocks';
+import { BrewMethod, formatClock } from '../core/brew';
 
 @Component({
   selector: 'app-post',
@@ -38,65 +39,90 @@ import { mountBrewBlocks } from '../shared/brew-blocks';
         >← {{ c ? i18n.pick(c.title) : i18n.t('nav.home') }}</a
       >
 
-      <header class="post-hero">
-        @if (m.cover) {
-          <img class="post-hero-cover" [src]="m.cover" [alt]="i18n.pick(m.title)" />
-        }
-        <div class="post-hero-text">
-          <div class="pc-kicker">
+      <div class="post-top" [class.has-params]="!!recipe()">
+        <header class="enamel-sign">
+          <p class="enamel-kicker">
             @if (c) {
-              <a
-                class="cat-chip"
-                [routerLink]="['/c', c.id]"
-                [style.--c1]="c.colors[0]"
-                [style.--c2]="c.colors[1]"
-                >{{ c.icon }} {{ i18n.pick(c.title) }}</a
-              >
+              <a [routerLink]="['/c', c.id]">{{ i18n.pick(c.title) }}</a>
             }
             @if (m.type === 'note' || m.type === 'guide') {
-              <span class="type-badge">{{
-                i18n.t(m.type === 'note' ? 'type.note' : 'type.guide')
-              }}</span>
+              <span>· {{ i18n.t(m.type === 'note' ? 'type.note' : 'type.guide') }}</span>
             }
             @if (m.level) {
-              <span class="level-badge level-{{ m.level }}">{{ levelLabel(m.level) }}</span>
+              <span>· {{ levelLabel(m.level) }}</span>
             }
-          </div>
+          </p>
           <h1>{{ i18n.pick(m.title) }}</h1>
           <p class="lead">{{ i18n.pick(m.summary) }}</p>
-          <div class="byline">
-            <span class="avatar" [class.bot]="m.type === 'news'">{{
-              m.type === 'news' ? '🤖' : initials(m.author)
-            }}</span>
-            <span>
-              <strong>{{ m.author }}</strong>
-              <span class="muted small"
-                >{{ i18n.date(m.date, 'long') }} · {{ m.minutes[i18n.lang()] }}
-                {{ i18n.t('common.minRead') }}</span
-              >
-            </span>
-            <span class="byline-actions">
-              @if (read()) {
-                <span class="done-badge">✓ {{ i18n.t('post.read') }}</span>
-              }
-              <button
-                class="btn ghost small-btn"
-                [class.on]="bookmarked()"
-                (click)="store.toggleBookmark(m.id)"
-              >
-                🔖 {{ bookmarked() ? i18n.t('post.bookmarked') : i18n.t('post.bookmark') }}
-              </button>
-            </span>
+          <p class="enamel-meta">
+            {{ m.type === 'news' ? '🤖 ' : '' }}{{ m.author }} · {{ i18n.date(m.date, 'long') }} ·
+            {{ m.minutes[i18n.lang()] }} {{ i18n.t('common.minRead') }}
+          </p>
+        </header>
+
+        @if (recipe(); as r) {
+          <aside class="lab-panel recipe-panel" [attr.aria-label]="i18n.t('post.params')">
+            <table class="recipe-table">
+              <caption>
+                {{
+                  i18n.t('post.params')
+                }}
+              </caption>
+              <tbody>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pCoffee') }}</th>
+                  <td>{{ r.coffee }} g</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pWater') }}</th>
+                  <td>{{ r.water }} g</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pRatio') }}</th>
+                  <td class="num-accent">1:{{ r.ratio }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pTemp') }}</th>
+                  <td>{{ r.temp }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pTime') }}</th>
+                  <td>{{ r.time }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{ i18n.t('post.pGrind') }}</th>
+                  <td class="recipe-text">{{ r.grind }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn" routerLink="/tools" [queryParams]="{ method: r.id }">{{
+              i18n.t('post.brewThis')
+            }}</a>
+          </aside>
+        }
+      </div>
+
+      <div class="byline-row">
+        @if (m.tags.length) {
+          <div class="tag-row">
+            @for (t of m.tags; track t) {
+              <a class="tag-pill" [routerLink]="['/tag', t]">#{{ t }}</a>
+            }
           </div>
-          @if (m.tags.length) {
-            <div class="tag-row">
-              @for (t of m.tags; track t) {
-                <a class="tag-pill" [routerLink]="['/tag', t]">#{{ t }}</a>
-              }
-            </div>
+        }
+        <span class="byline-actions">
+          @if (read()) {
+            <span class="done-badge">✓ {{ i18n.t('post.read') }}</span>
           }
-        </div>
-      </header>
+          <button
+            class="btn ghost small-btn"
+            [class.on]="bookmarked()"
+            (click)="store.toggleBookmark(m.id)"
+          >
+            {{ bookmarked() ? i18n.t('post.bookmarked') : i18n.t('post.bookmark') }}
+          </button>
+        </span>
+      </div>
 
       @if (fallback()) {
         <p class="notice">{{ i18n.t('post.fallback') }}</p>
@@ -106,7 +132,7 @@ import { mountBrewBlocks } from '../shared/brew-blocks';
         <div class="post-main">
           @if (seriesInfo(); as s) {
             <div class="series-box">
-              <span class="small muted">📚 {{ i18n.t('post.inSeries') }}</span>
+              <span class="small muted">{{ i18n.t('post.inSeries') }}</span>
               <a [routerLink]="['/series', s.id]"
                 ><strong>{{ i18n.pick(s.title) }}</strong></a
               >
@@ -143,9 +169,6 @@ import { mountBrewBlocks } from '../shared/brew-blocks';
             <nav class="post-nav">
               @if (s.prev; as p) {
                 <a class="post-nav-card" [routerLink]="['/p', p.id]">
-                  @if (p.cover) {
-                    <img [src]="p.cover" alt="" />
-                  }
                   <span
                     ><small class="muted">← {{ i18n.t('post.prev') }}</small
                     ><strong>{{ i18n.pick(p.title) }}</strong></span
@@ -160,16 +183,13 @@ import { mountBrewBlocks } from '../shared/brew-blocks';
                     ><small class="muted">{{ i18n.t('post.next') }} →</small
                     ><strong>{{ i18n.pick(n.title) }}</strong></span
                   >
-                  @if (n.cover) {
-                    <img [src]="n.cover" alt="" />
-                  }
                 </a>
               }
             </nav>
           }
 
           <section class="card notes-box">
-            <h2>✍️ {{ i18n.t('post.notes') }}</h2>
+            <h2>{{ i18n.t('post.notes') }}</h2>
             <textarea
               [value]="noteDraft()"
               (input)="onNote($any($event.target).value)"
@@ -186,7 +206,7 @@ import { mountBrewBlocks } from '../shared/brew-blocks';
               <h2 class="section-title">{{ i18n.t('post.related') }}</h2>
               <div class="post-grid three">
                 @for (p of related(); track p.id) {
-                  <app-post-card [post]="p" />
+                  <app-post-card [post]="p" variant="lab" />
                 }
               </div>
             </section>
@@ -286,6 +306,21 @@ export class PostPage {
   protected readonly category = computed(() =>
     this.content.categoryById().get(this.meta()?.category ?? ''),
   );
+  /** Recipe panel for posts that teach one brew method (front matter `method:`). */
+  protected readonly recipe = computed(() => {
+    const m = this.meta();
+    const p = m?.method ? this.content.presetById().get(m.method as BrewMethod) : undefined;
+    if (!p) return null;
+    return {
+      id: p.id,
+      coffee: p.coffee,
+      water: Math.round(p.coffee * p.ratio),
+      ratio: p.ratio,
+      temp: `${p.tempC[0]}–${p.tempC[1]}°C`,
+      time: formatClock(p.timeSec),
+      grind: this.i18n.pick(p.grind),
+    };
+  });
   protected readonly read = computed(() => !!this.store.state().read[this.id()]);
   protected readonly bookmarked = computed(() => !!this.store.state().bookmarks[this.id()]);
   protected readonly noteDraft = linkedSignal(
@@ -455,14 +490,5 @@ export class PostPage {
           ? 'level.intermediate'
           : 'level.beginner',
     );
-  }
-
-  protected initials(name: string) {
-    return name
-      .split(/\s+/)
-      .map((w) => w[0])
-      .join('')
-      .slice(0, 2)
-      .toUpperCase();
   }
 }

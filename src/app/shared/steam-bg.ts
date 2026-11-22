@@ -59,6 +59,7 @@ export class SteamBackground {
     let steam = '';
     let beanFill = '';
     let beanLine = '';
+    let widthScale = 1;
 
     const css = (name: string, fallback: string) =>
       getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback;
@@ -115,6 +116,7 @@ export class SteamBackground {
         steam = css('--steam', 'rgba(255,255,255,.35)');
         beanFill = css('--bean-bg', 'rgba(120,80,50,.08)');
         beanLine = css('--bean-line', 'rgba(120,80,50,.12)');
+        widthScale = Number.parseFloat(css('--steam-scale', '1')) || 1;
       }
 
       for (const b of beans) {
@@ -145,7 +147,7 @@ export class SteamBackground {
         g.addColorStop(0.35, steam);
         g.addColorStop(1, 'transparent');
         ctx.strokeStyle = g;
-        ctx.lineWidth = s.width;
+        ctx.lineWidth = s.width * widthScale;
         ctx.globalAlpha = 0.28;
         ctx.stroke();
         ctx.globalAlpha = 1;

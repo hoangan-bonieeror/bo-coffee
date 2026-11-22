@@ -51,6 +51,16 @@ function escapeHtml(s: string) {
 }
 
 /** URL-safe id that also works for Vietnamese headings ("Vòng đời" → "vong-doi"). */
+/** Headings arrive as HTML; the TOC renders plain text, so turn entities back into characters. */
+export function decodeEntities(text: string): string {
+  return text
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&#x27;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
 export function slugify(text: string): string {
   return (
     text
@@ -109,7 +119,8 @@ export function renderMarkdown(md: string): RenderedMarkdown {
         const n = used.get(id) ?? 0;
         used.set(id, n + 1);
         if (n) id = `${id}-${n}`;
-        if (depth <= 3) toc.push({ id, text: inner.replace(/<[^>]+>/g, ''), level: depth });
+        if (depth <= 3)
+          toc.push({ id, text: decodeEntities(inner.replace(/<[^>]+>/g, '')), level: depth });
         return `<h${depth} id="${id}" class="anchor-heading">${inner}</h${depth}>`;
       },
       code({ text, lang }: Tokens.Code) {

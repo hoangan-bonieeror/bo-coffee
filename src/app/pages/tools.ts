@@ -35,15 +35,20 @@ const EY_ZONE: [number, number] = [18, 22];
     </nav>
 
     @if (content.presets().length) {
-      <div class="tools-grid">
+      <div class="tools-grid" id="ratio">
         @for (m of [current()]; track m) {
           <app-brew-calc [method]="m" [startCoffee]="coffeeNum()" />
-          <app-brew-timer [method]="m" [startCoffee]="coffeeNum()" [startWater]="waterNum()" />
+          <app-brew-timer
+            id="timer"
+            [method]="m"
+            [startCoffee]="coffeeNum()"
+            [startWater]="waterNum()"
+          />
         }
       </div>
     }
 
-    <section class="card ey-card">
+    <section class="card ey-card" id="ey">
       <h2>🔬 {{ i18n.t('ey.title') }}</h2>
       <p class="small muted">{{ i18n.t('ey.intro') }}</p>
       <div class="ey-grid">
@@ -108,7 +113,7 @@ const EY_ZONE: [number, number] = [18, 22];
       </p>
     </section>
 
-    <section class="card">
+    <section class="card" id="wheel">
       <h2>🎨 {{ i18n.t('flavor.title') }}</h2>
       <app-flavor-wheel />
     </section>

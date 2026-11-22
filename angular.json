@@ -54,10 +54,14 @@
             ],
             "styles": [
               "@fontsource-variable/jetbrains-mono/index.css",
-              "@fontsource-variable/fraunces/index.css",
-              "@fontsource-variable/inter/index.css",
+              "@fontsource-variable/oswald/index.css",
+              "@fontsource/be-vietnam-pro/400.css",
+              "@fontsource/be-vietnam-pro/500.css",
+              "@fontsource/be-vietnam-pro/600.css",
+              "@fontsource/be-vietnam-pro/700.css",
               "src/styles.scss",
-              "src/coffee.scss"
+              "src/coffee.scss",
+              "src/saigon-lab.scss"
             ],
             "allowedCommonJsDependencies": [
               "@braintree/sanitize-url",

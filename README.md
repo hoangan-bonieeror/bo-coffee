@@ -34,6 +34,17 @@
 
 ---
 
+## 🎨 Giao diện "Sài Gòn + Lab" / Design
+
+Bo Coffee chạy cùng cơ chế với Bostu nhưng có giao diện riêng, ghép hai ý:
+
+- **Quán cà phê Sài Gòn — bản sắc:** thanh menu đỏ như biển hiệu tráng men, viền vàng, dải gạch bông; trang chủ mở bằng *Thực đơn cách pha* trong đó "giá tiền" là tỉ lệ cà phê : nước; tiêu đề bài in trên một tấm biển men. Font tiêu đề Oswald, chữ thường Be Vietnam Pro.
+- **Phòng thí nghiệm chiết xuất — số liệu:** mọi con số dùng JetBrains Mono; khung có viền góc; biểu đồ *Ly gần nhất* vẽ các lần pha có đo TDS theo tỉ lệ chiết xuất (vùng 18–22 %, thêm ô Gold Cup cho cách pha lọc); bảng *Thông số pha* cạnh bài có `method:`.
+
+Toàn bộ lớp giao diện nằm trong `src/saigon-lab.scss` (nạp sau cùng, chỉ ghi đè token và component), nên muốn đổi phong cách chỉ cần sửa/bỏ file này. Có chế độ sáng (nền kem) và tối (nâu espresso) theo hệ điều hành; trên điện thoại có thanh điều hướng 4 mục ở đáy màn hình. Bản phác thảo nằm trên canvas thiết kế của dự án.
+
+*The "Saigon + Lab" skin: a Saigon café menu board (red enamel sign, tiled strip, Oswald) carries the identity, an extraction lab (mono numbers, bracketed panels, an EY/TDS chart of your last cups) carries the data. It all lives in `src/saigon-lab.scss`, loaded last.*
+
 ## 🏗️ Kiến trúc / Architecture
 
 Không có server. Nội dung là file Markdown trong git; dữ liệu cá nhân nằm trong trình duyệt. Chi phí vận hành: 0 đồng.
